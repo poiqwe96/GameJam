@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class MakeSpot : MonoBehaviour {
     public float makeSpotCD = 1f;
-
+    public bool MakeSpotYes = true;
 	// Use this for initialization
 	void Start () {
+       if( MakeSpotYes)
         StartCoroutine(MakeSpotCD(makeSpotCD));
 	}
 	IEnumerator MakeSpotCD(float _delay)

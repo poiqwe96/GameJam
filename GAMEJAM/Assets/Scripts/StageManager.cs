@@ -5,7 +5,11 @@ using UnityEngine.Events;
 public class StageManager : MonoBehaviour {
     public static StageManager instance;
     public GameObject Player;
-    GameObject[] ObjArray;
+   public GameObject[] ObjArray;//렌덤배치할 오브젝트
+    public GameObject[] PosArray;
+    public bool isGenerate;//오브젝트 생성할것인지?
+    //transform array
+
     #region SingleToneAwake
     private void Awake()
     {
@@ -16,12 +20,7 @@ public class StageManager : MonoBehaviour {
             Debug.LogError("싱글턴 이미 있음!!");
     }
     #endregion
-    private void Start()
-    {
-        CountObj = 0;
-        ObjArray = GameObject.FindGameObjectsWithTag("Obj");
-        //MaxCount=ObjArray.Length;
-    }
+  
     public UnityEvent ShowSomething;
 
     public int CountObj=0;//모은 오브젝트 개수
@@ -29,6 +28,27 @@ public class StageManager : MonoBehaviour {
 
     [HideInInspector]
    public bool isLootAll = false;
+
+    public void GenerateObj()
+    {   
+      foreach (GameObject pos in PosArray)
+        { int _Random = Random.Range(0, ObjArray.Length );
+            Vector3 RandomOffset = new Vector3(Random.Range(-3f, 3f), Random.Range(-3f, 3f), Random.Range(-3f, 3f));
+           GameObject obj= Instantiate(ObjArray[_Random],pos.transform.position+RandomOffset,transform.rotation);
+            obj.transform.SetParent(pos.transform);
+        }
+    }
+
+
+    private void Start()
+    {
+        CountObj = 0;
+        PosArray = GameObject.FindGameObjectsWithTag("Position");
+        Debug.Log("포지션들 찾은 개수:" + PosArray.Length);
+        if (isGenerate)
+            GenerateObj();
+
+    }
     public void AddCountObj()//개수증가
     {
         CountObj++;
@@ -41,16 +61,5 @@ public class StageManager : MonoBehaviour {
             Player.GetComponent<MakeSpot>().StopAllCoroutines();
         }
     }
-    public void AddCountObj(int _objCount)//개수증가가 한개가아닐때 오버로드
-    {
-        CountObj+=_objCount;
-
-        if (CountObj >= MaxCount)
-        {
-            if (ShowSomething != null)
-                ShowSomething.Invoke();
-            isLootAll = true;
-            Player.GetComponent<MakeSpot>().StopAllCoroutines();
-        }
-    }
+   
 }

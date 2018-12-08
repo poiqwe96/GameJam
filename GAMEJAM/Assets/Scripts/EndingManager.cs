@@ -9,13 +9,15 @@ public class EndingManager : MonoBehaviour {
     #region SingleToneAwake
     private void Awake()
     {if (instance == null)
-        { instance = this;
+        {
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
+        {
             Debug.LogError("싱글턴 이미 있음!!");
-
-
+            Destroy(gameObject);
+        }
     }
     #endregion
  

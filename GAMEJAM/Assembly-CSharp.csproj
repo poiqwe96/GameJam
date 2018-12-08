@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\EndingManager.cs" />
     <Compile Include="Assets\Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\Scripts\IntroChapter\ObjSpin.cs" />
     <Compile Include="Assets\Scripts\MakeSpot.cs" />
     <Compile Include="Assets\Scripts\MinkukStage\Move2DPlayer.cs" />
     <Compile Include="Assets\Scripts\MinkukStage\MoveNPC.cs" />
@@ -74,6 +75,39 @@
     <Compile Include="Assets\Scripts\Obj\Obj.cs" />
     <Compile Include="Assets\Scripts\StageManager.cs" />
     <Compile Include="Assets\Scripts\TestStage\DoorTrigger.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\thirdparty\2DxFX\ExtraShaders\Examples\_2DC_ArrowSelection.cs" />
     <Compile Include="Assets\thirdparty\2DxFX\ExtraShaders\Examples\_2DC_ShaderLerpDemo.cs" />
     <Compile Include="Assets\thirdparty\2DxFX\Scripts\_2DxFX.cs" />
@@ -604,7 +638,9 @@
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Shaders 2.0\TCP2_OutlineOnly Blended.shader" />
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 4.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Smoke.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\PixelExplosion.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\thirdparty\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_CircleFade.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_NoiseAnimated.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_Sharpen.shader" />
@@ -709,6 +745,7 @@
     <None Include="Assets\thirdparty\Clothe3D\Resources\ObiMaterials\ParticleShader.shader" />
     <None Include="Assets\thirdparty\SineVFX\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_ColorChange.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_Cartoon.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_MetalFX.shader" />
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Shaders 2.0\TCP2_OutlineOnly.shader" />
@@ -740,6 +777,7 @@
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\Animated_Twist.shader" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\ColorHSV.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_Threshold.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\thirdparty\Clothe3D\Resources\ObiMaterials\StandardBackfaces.shader" />
     <None Include="Assets\thirdparty\ShaderoSprite\license.txt.txt" />
     <None Include="Assets\thirdparty\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Liquid.shader" />
@@ -840,6 +878,7 @@
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\BlurHQ.shader" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\ColorDarkness.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_Slim.shader" />
+    <None Include="Assets\Materials\Shader\ScreenCutoutShader.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_BlackHole.shader" />
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Shaders PBS\TCP2_PBS_Core.cginc" />
     <None Include="Assets\thirdparty\Clothe3D\Resources\ObiMaterials\SimpleParticleShader.shader" />
@@ -859,10 +898,12 @@
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_Blood.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Fire.shader" />
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Shaders 2.0\Variants Base\TCP2_Desktop_Outline.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\LightGlow.shader" />
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Shaders 2.0 Generated\Examples\PBS\Hand Painted.shader" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\Unlit\Unlit_Cutout.shader" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\Unlit\Unlit_Add_2Pass_Blend_Vertex_Alpha.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\Unlit\Unlit_Add_2Pass.shader" />
     <None Include="Assets\thirdparty\Retro Bit FX\Retro Bit FX - Readme.txt" />
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Shaders PBS\TCP2_Standard PBS Outline.shader" />
@@ -874,11 +915,13 @@
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\FishEye.shader" />
     <None Include="Assets\thirdparty\SineVFX\PostProcessing\Editor Resources\UI\Trackball.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_GoldFX.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\thirdparty\ShaderoSprite\Examples\Shaders\CircleProgressBar.shader" />
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Shaders 2.0 Generated\Examples\PBS\Blended Outline.shader" />
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 3 Skin.shader" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\cginc\CurvedWorld_VertexLit.cginc" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_PixelDie.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_WaterAndBackgroundDeluxe.shader" />
     <None Include="Assets\thirdparty\ShaderoSprite\Examples\Shaders\Palette4Swapping.shader" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\DisolveHDR.shader" />
@@ -892,6 +935,7 @@
     <None Include="Assets\VacuumShaders\Curved World\Example Scenes\2. Little Planet (Nightmare)\Fonts\LuckiestGuy\LICENSE.txt" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\One Directional Light\ODL_Diffuse.shader" />
     <None Include="Assets\thirdparty\Fractur\Fracturing\Editor Shaders\FracturingColored.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\thirdparty\Clothe3D\Resources\ObiMaterials\ObiUtils.cginc" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_PlasmaShield.shader" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\RetroCGA2.shader" />
@@ -910,6 +954,7 @@
     <None Include="Assets\thirdparty\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_4Gradients.shader" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\cginc\CurvedWorld_Base.cginc" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\Automatic2spritesLerp.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\One Directional Light\ODL_Add_Blend_Vertex_Alpha.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_FlameAdditive.shader" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\Unlit\Unlit_Cutout_Blend_Vertex_Alpha.shader" />
@@ -917,6 +962,7 @@
     <None Include="Assets\VacuumShaders\Curved World\Shaders\cginc\CurvedWorld_Functions.cginc" />
     <None Include="Assets\thirdparty\SineVFX\PostProcessing\Resources\Shaders\TAA.cginc" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\One Directional Light\ODL_Blend_Vertex_Alpha.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_Fire.shader" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\TurnMetal.shader" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\cginc\CurvedWorld_UnityBuiltin2xTreeLibrary.cginc" />
@@ -952,6 +998,7 @@
     <None Include="Assets\thirdparty\Polygon Arsenal\Shaders\Standard\PolyLitSurface.shader" />
     <None Include="Assets\thirdparty\SineVFX\PostProcessing\Resources\Shaders\FXAA.shader" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\PixelisationXY.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\CompressionTintAdditive.shader" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\One Directional Light\ODL_Transparent_2Pass_Blend_Detail.shader" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\InnerGlow.shader" />
@@ -966,6 +1013,7 @@
     <None Include="Assets\VacuumShaders\Curved World\Shaders\One Directional Light\ODL_Transparent_2Pass.shader" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\Projector\Projector_Light.shader" />
     <None Include="Assets\thirdparty\SineVFX\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\thirdparty\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_EdgeColor.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_Color.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_MetalFX.shader" />
@@ -979,6 +1027,7 @@
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Shaders 2.0\TCP2_OutlineOnly Blended SM2.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_Hologram3.shader" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\cginc\CurvedWorld_UnityStandardMeta.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Shaders PBS\TCP2_PBS_Main.cginc" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\Holographic.shader" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\Resources\ShadowCaster_Cutout.shader" />
@@ -993,6 +1042,7 @@
     <None Include="Assets\VacuumShaders\Curved World\Shaders\cginc\CurvedWorld_SpeedTreeBillboardCommon.cginc" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\TurnToInfinite.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_ColorRGB.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 5.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_BlurHQX.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_Pixel.shader" />
@@ -1021,6 +1071,8 @@
     <None Include="Assets\thirdparty\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Blur.shader" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\Unlit\Unlit_Add_Blend_Decal.shader" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\One Directional Light\ODL_Cutout_Blend_Vertex_Alpha.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Shaders 2.0\Include\TCP2_Outline_Stencil.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_Distortion_Additive.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_ColorRGB.shader" />
@@ -1046,6 +1098,7 @@
     <None Include="Assets\VCUL\Manual.txt" />
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Shaders 2.0 Generated\Examples\Water\Lava.shader" />
     <None Include="Assets\thirdparty\Fractur\MeshCombiner\!Readme - v1.02.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
     <None Include="Assets\thirdparty\SineVFX\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\TurnGold.shader" />
     <None Include="Assets\thirdparty\2DxFX\Resources\_2dxFX_Distortion.shader" />
@@ -1065,6 +1118,7 @@
     <None Include="Assets\VacuumShaders\Curved World\Shaders\Resources\Outline.shader" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\One Directional Light\ODL_Transparent_Blend_Vertex_Alpha.shader" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\cginc\CurvedWorld_Projector.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Shaders 2.0\TCP2_OutlineOnly SM2.shader" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\BreakingMirror.shader" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\Fusion2SpritesAdditive.shader" />
@@ -1088,6 +1142,7 @@
     <None Include="Assets\thirdparty\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Pixel8bitsBW.shader" />
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Shaders 2.0\Include\TCP2_Include.cginc" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\Unlit\Unlit_Add_2Pass_Blend_Decal.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\VacuumShaders\Curved World\Shaders\One Directional Light\ODL_Add.shader" />
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Shaders 2.0 Generated\Examples\Default\HSV.shader" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\Pinch.shader" />
@@ -1100,6 +1155,7 @@
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Shaders 2.0 Generated\Examples\Water\Water WindWaker2.shader" />
     <None Include="Assets\thirdparty\JMO Assets\Toony Colors Pro\Textures\MatCap\MatCap Textures License.txt" />
     <None Include="Assets\thirdparty\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Normal.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\Animated_Zoom.shader" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\BreakingGlass.shader" />
     <None Include="Assets\thirdparty\2DxFX\ExtraShaders\Shader\Blur.shader" />

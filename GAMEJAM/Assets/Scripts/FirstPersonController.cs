@@ -11,6 +11,7 @@ public class FirstPersonController : MonoBehaviour {
     [Header("Debug")]
     public bool isAuto = false;
     public bool isDebug = false;
+    public bool isFly = false;
     [HideInInspector]
     public GameObject FocusedTarget;//현재 클릭한 타겟
     float SpeedMultiple = 1.8f;
@@ -42,8 +43,8 @@ public class FirstPersonController : MonoBehaviour {
             movement.z = 1f;
         }
         Vector3 CoordFromCam = Camera.main.transform.TransformDirection(movement);
-
-        CoordFromCam.y = 0f;
+        if (!isFly)
+            CoordFromCam.y = 0f;
         if (Input.GetKey(KeyCode.LeftShift))
             rgd.velocity = CoordFromCam * Time.deltaTime * Speed * SpeedMultiple;
         else
@@ -85,13 +86,13 @@ public class FirstPersonController : MonoBehaviour {
         {
             ClampY = 90.0f;
             mouseY = 0f;
-            ClampXAxisRotationToValue(270.0f);
+           // ClampXAxisRotationToValue(270.0f);
         }
         else if (ClampY < -90f)
         {
             ClampY = -90.0f;
             mouseY = 0f;
-            ClampXAxisRotationToValue(90.0f);
+          //  ClampXAxisRotationToValue(90.0f);
         }
 
 
@@ -106,7 +107,9 @@ public class FirstPersonController : MonoBehaviour {
     {
         Vector3 eulerRotation = transform.eulerAngles;
         eulerRotation.x = value;
-        transform.eulerAngles = eulerRotation;
+
+        //transform.eulerAngles = eulerRotation;
+        transform.rotation = Quaternion.Euler(eulerRotation);
     }//짐벌락방지
     private void OnDrawGizmos()
     {
@@ -118,6 +121,11 @@ public class FirstPersonController : MonoBehaviour {
         {
           
             InteractObject interactObject = other.GetComponent<InteractObject>();
+            if (interactObject == null)
+            {
+                Debug.Log("상호작용 오브젝트 비설정");
+                return;
+            }
 
             interactObject.Triggered();
             Destroy(interactObject.VFXinstance,1f);

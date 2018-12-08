@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DoorTrigger : MonoBehaviour {
     Animator anim;
-
+    public GameObject door;
 
 	// Use this for initialization
 	void Start () {
-        anim = GetComponent<Animator>();
+        anim = door.GetComponent<Animator>();
         
 	}
     private void OnTriggerEnter(Collider other)
