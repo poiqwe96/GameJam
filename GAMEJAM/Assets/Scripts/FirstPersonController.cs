@@ -64,9 +64,9 @@ public class FirstPersonController : MonoBehaviour {
             {
                 //FocusedTarget
                 FocusedTarget = hit.collider.gameObject;
-                Debug.Log("Focused Target:" + FocusedTarget.name);
-                Obj obj = FocusedTarget.GetComponent<Obj>();
-                obj.OnGetThisObj();
+
+                InteractObject obj = FocusedTarget.GetComponent<InteractObject>();
+                obj.Clicked();
                 Destroy(obj.VFXinstance, 1f);
             }
         }
@@ -117,18 +117,10 @@ public class FirstPersonController : MonoBehaviour {
         if (other.CompareTag("Obj"))//클릭할 오브젝트 태그 설정 필요
         {
           
+            InteractObject interactObject = other.GetComponent<InteractObject>();
 
-            Obj obj = other.GetComponent<Obj>();
-
-            if (obj.OBJTYPE == OBJTYPE.TRIGGER)
-            {
-                if (TriggerObj != null)
-                    TriggerObj.Invoke();
-                obj.OnGetThisObj();
-                Destroy(obj.VFXinstance, 1f);
-            }
-            //ShowThis.SetActive(true);
-            //other.gameObject.SetActive(false);
+            interactObject.Triggered();
+            Destroy(interactObject.VFXinstance,1f);
         }
     }
 }

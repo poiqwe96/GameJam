@@ -7,11 +7,11 @@ public class DoorObj : Obj {
     //주기적으로 
     //3~5
     bool isOpen = false;
-    float CD = 2f;
+    float CD = 2.5f;
 	// Use this for initialization
 	void Start () {
         anim=GetComponent<Animator>();
-        CD =Random.Range(3f, 5f);
+       
         StartCoroutine(OpenLoop(CD));
 	}
 
@@ -20,7 +20,7 @@ public class DoorObj : Obj {
         while (true)
         {
             isOpen = false;
-            Debug.Log("래덤인자 cd :" + _cd);
+
             yield return new WaitForSeconds(_cd);
             isOpen = true;
             anim.SetTrigger("DoorOpen");
