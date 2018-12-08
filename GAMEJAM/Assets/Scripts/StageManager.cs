@@ -18,8 +18,9 @@ public class StageManager : MonoBehaviour {
     #endregion
     private void Start()
     {
+        CountObj = 0;
         ObjArray = GameObject.FindGameObjectsWithTag("Obj");
-        MaxCount=ObjArray.Length;
+        //MaxCount=ObjArray.Length;
     }
     public UnityEvent ShowSomething;
 

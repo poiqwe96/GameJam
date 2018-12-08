@@ -112,20 +112,23 @@ public class FirstPersonController : MonoBehaviour {
     {
         Gizmos.DrawWireSphere(transform.position, RayDistance);
     }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.CompareTag("Obj"))//클릭할 오브젝트 태그 설정 필요
-    //    {
-    //        if (TriggerObj != null)
-    //            TriggerObj.Invoke();
-    //        Obj obj = other.GetComponent<Obj>();
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Obj"))//클릭할 오브젝트 태그 설정 필요
+        {
+          
 
-    //        if(obj.OBJTYPE == OBJTYPE.TRIGGER)
-    //        {
-    //            obj.OnGetThisObj();
-    //        }
-    //        //ShowThis.SetActive(true);
-    //         other.gameObject.SetActive(false);
-    //    }
-    //}
+            Obj obj = other.GetComponent<Obj>();
+
+            if (obj.OBJTYPE == OBJTYPE.TRIGGER)
+            {
+                if (TriggerObj != null)
+                    TriggerObj.Invoke();
+                obj.OnGetThisObj();
+                Destroy(obj.VFXinstance, 1f);
+            }
+            //ShowThis.SetActive(true);
+            //other.gameObject.SetActive(false);
+        }
+    }
 }
